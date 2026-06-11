@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+.swipe {
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  height: 160px;
+}
+
+.swipe::-webkit-scrollbar {
+  display: none;
+}
+
+.swipe img {
+  display: inline-block;
+  width: 150px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.smallslide {
+  background-color: white;
+  font-weight: bold;
+}
+.videoedit {
+  position: relative;          /* IMPORTANT */
+  width: 100%;
+  height: 100vh;               /* Full screen height */
+  overflow: hidden;
+
+}
+
+.videoedit video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* Makes video fill screen properly */
+  z-index: 0;
+}
+
+/* Dark overlay */
+.videoedit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 50% opacity */
+  z-index: 1;
+}
+
+/* Text on top of video */
+.videoedit h1 {
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* Project Grid */
+.projects {
+  padding: 80px 50px;
+  background: #f9f9f9;
+  margin-top: 20px;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-info {
+  transform: translateY(0);
+}
+
+/* Services */
+.services {
+  padding: 80px 50px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: #f3f3f3;
+  border-radius: 15px;
+  padding: 30px 20px;
+  width: 450px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+/* About Section */
+.about {
+  padding: 80px 50px;
+  background: #f9f9f9;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-content img {
+  width: 400px;
+  border-radius: 15px;
+  flex: 1;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.stat h3 {
+  font-size: 2rem;
+  color: #fca311;
+  margin-bottom: 5px;
+}
