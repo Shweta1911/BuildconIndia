@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+/* =============================
+   Navbar – Premium Design
+   ============================= */
+.navbar-custom {
+  background: #1A1A1A !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+  transition: background 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Brand / Logo */
+.brand-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #FFFFFF !important;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.brand-text svg {
+  flex-shrink: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-logo {
+  height: 50px;
+  width: auto;
+  margin-right: 12px;
+}
+
+/* Nav Links */
+.nav-link-custom {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 16px !important;
+  position: relative;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-link-custom::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 16px;
+  bottom: 2px;
+  background: #F4B400;
+  transition: width 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  color: #FFFFFF !important;
+}
+
+.nav-link-custom:hover::after {
+  width: calc(100% - 32px);
+}
+
+/* "Get a Quote" Button */
+.quote-btn {
+  background: #F4B400 !important;
+  color: #1A1A1A !important;
+  font-weight: 700 !important;
+  padding: 8px 24px !important;
+  border-radius: 50px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.quote-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244, 180, 0, 0.35);
+}
+
+.quote-btn::after {
+  display: none !important;
+}
+
+/* Mobile adjustments */
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-custom {
+    padding: 8px 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-link-custom {
+    padding: 12px 0 !important;
+    text-align: center;
+  }
+
+  .nav-link-custom::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-link-custom:hover::after {
+    width: 60%;
+  }
+
+  .quote-btn {
+    margin-top: 8px;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    padding: 10px 30px !important;
+  }
+
+  .navbar-nav {
+    padding: 15px 0;
   }
 }

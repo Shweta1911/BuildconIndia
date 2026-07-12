@@ -1,0 +1,178 @@
+/* ============================
+   Services Page – Premium Design
+   ============================ */
+
+.services-page {
+  padding: 120px 50px 80px;
+  background: #FFFFFF;
+  min-height: 100vh;
+}
+
+.services-page h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #1A1A1A;
+  font-weight: 800;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.services-page h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #F4B400;
+  margin: 14px auto 0;
+  border-radius: 2px;
+}
+
+.services-page > .subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.05rem;
+  margin-bottom: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card-full {
+  background: #FFFFFF;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 40px 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top: 4px solid #F4B400;
+}
+
+.service-card-full:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+
+.service-card-full .service-icon svg {
+  stroke: #F4B400;
+  margin-bottom: 18px;
+}
+
+.service-card-full h3 {
+  font-size: 1.5rem;
+  color: #1A1A1A;
+  margin-bottom: 12px;
+}
+
+.service-card-full p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.service-card-full ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-card-full ul li {
+  padding: 5px 0;
+  color: #444;
+  position: relative;
+  padding-left: 22px;
+}
+
+.service-card-full ul li::before {
+  content: "✓";
+  color: #F4B400;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+
+/* Process Timeline */
+.process-section {
+  max-width: 900px;
+  margin: 80px auto 0;
+  text-align: center;
+}
+
+.process-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #1A1A1A;
+  position: relative;
+}
+
+.process-section h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #F4B400;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.process-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.process-step {
+  background: #FFFFFF;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.process-step:hover {
+  border-color: #F4B400;
+  transform: scale(1.05);
+}
+
+.process-step .step-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #F4B400;
+}
+
+.process-step .step-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .services-page {
+    padding: 100px 20px 50px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step {
+    width: 130px;
+    height: 130px;
+  }
+}
