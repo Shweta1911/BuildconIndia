@@ -1,21 +1,22 @@
 import './App.css';
 import Contacts from './pages/Contact';
 import Home from './pages/Home';
-import { Link, Route, Routes } from 'react-router-dom';
+import Services from './pages/Services';
+import Projects from './pages/Projects';
+import ProjectDetail from './pages/ProjectDetail';
+import Footer from './pages/Footer';
+import { Link, Route, Routes, Navigate } from 'react-router-dom';
 
 function App() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark head fixed-top">
-        <div className="container-fluid">
+      <nav className="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+        <div className="container">
 
-          {/* Logo */}
-          <Link className="navbar-brand d-flex align-items-center gap-2" to="/home">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-              className="bi bi-airplane-engines-fill" viewBox="0 0 16 16">
-              <path d="M8 0c-.787 0-1.292.592-1.572 1.151A4.35 4.35 0 0 0 6 3v3.691l-2 1V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.191l-1.17.585A1.5 1.5 0 0 0 0 10.618V12a.5.5 0 0 0 .582.493l1.631-.272.313.937a.5.5 0 0 0 .948 0l.405-1.214 2.21-.369.375 2.253-1.318 1.318A.5.5 0 0 0 5.5 16h5a.5.5 0 0 0 .354-.854l-1.318-1.318.375-2.253 2.21.369.405 1.214a.5.5 0 0 0 .948 0l.313-.937 1.63.272A.5.5 0 0 0 16 12v-1.382a1.5 1.5 0 0 0-.83-1.342L14 8.691V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v.191l-2-1V3c0-.568-.14-1.271-.428-1.849C9.292.591 8.787 0 8 0" />
-            </svg>
-            Website Name
+          {/* Logo / Brand */}
+          <Link className="navbar-brand brand-text" to="/home">
+            <img src="/logo.svg" alt="Buildcon India" className="navbar-logo" />
+            Buildcon India
           </Link>
 
           {/* Mobile Toggle */}
@@ -25,24 +26,43 @@ function App() {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* Links */}
+          {/* Nav Links */}
           <div className="collapse navbar-collapse" id="navbarNav">
-            <div className="navbar-nav ms-auto">
-              <Link className="nav-link" to="/home">Home</Link>
-              <Link className="nav-link" to="/contact">Contact</Link>
-            </div>
+            <ul className="navbar-nav ms-auto align-items-lg-center">
+              <li className="nav-item">
+                <Link className="nav-link nav-link-custom" to="/home">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link nav-link-custom" to="/services">Services</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link nav-link-custom" to="/projects">Projects</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link nav-link-custom" to="/contact">Contact</Link>
+              </li>
+              <li className="nav-item ms-lg-3">
+                <Link className="nav-link quote-btn" to="/contact">Get a Quote</Link>
+              </li>
+            </ul>
           </div>
 
         </div>
       </nav>
 
-      {/* Add margin so content not hidden behind fixed navbar */}
+      {/* Page content */}
       <div style={{ marginTop: "0px" }}>
         <Routes>
+          <Route path="/" element={<Navigate to="/home" />} />
           <Route path="home" element={<Home />} />
+          <Route path="services" element={<Services />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="projects/:projectId" element={<ProjectDetail />} />
           <Route path="contact" element={<Contacts />} />
         </Routes>
       </div>
+
+      <Footer />
     </div>
   );
 }
