@@ -1,21 +1,21 @@
 /* =============================
    Navbar – Premium Design
-   ============================= */
+   ============================ */
 .navbar-custom {
-  background: #1A1A1A !important;
+  background: var(--color-charcoal) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-md);
   padding: 10px 0;
-  transition: background 0.3s ease;
+  transition: background var(--transition-normal);
 }
 
 /* Brand / Logo */
 .brand-text {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.5px;
-  color: #FFFFFF !important;
+  color: var(--color-white) !important;
   display: flex;
   align-items: center;
 }
@@ -33,11 +33,11 @@
 /* Nav Links */
 .nav-link-custom {
   color: rgba(255, 255, 255, 0.85) !important;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   font-size: 0.95rem;
   padding: 8px 16px !important;
   position: relative;
-  transition: color 0.3s ease;
+  transition: color var(--transition-normal);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -49,12 +49,12 @@
   height: 2px;
   left: 16px;
   bottom: 2px;
-  background: #F4B400;
-  transition: width 0.3s ease;
+  background: var(--color-primary);
+  transition: width var(--transition-normal);
 }
 
 .nav-link-custom:hover {
-  color: #FFFFFF !important;
+  color: var(--color-white) !important;
 }
 
 .nav-link-custom:hover::after {
@@ -63,15 +63,15 @@
 
 /* "Get a Quote" Button */
 .quote-btn {
-  background: #F4B400 !important;
-  color: #1A1A1A !important;
-  font-weight: 700 !important;
+  background: var(--color-primary) !important;
+  color: var(--color-charcoal) !important;
+  font-weight: var(--font-weight-bold) !important;
   padding: 8px 24px !important;
-  border-radius: 50px !important;
+  border-radius: var(--radius-full) !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-size: 0.9rem !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal) !important;
 }
 
 .quote-btn:hover {

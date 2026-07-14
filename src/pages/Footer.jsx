@@ -77,9 +77,9 @@ const Footer = () => {
         </div>
         <div className="footer-col">
           <h3>Contact Info</h3>
-          <p><MapPinIcon /> 258, Srno, 43, Khese Park, Lohegaon, Pune, Maharashtra 411032</p>
+          <p><MapPinIcon /> Office No. 441, Triaa Vasantam City Center, Lohgaon Rd, Dhanori, Pune, Maharashtra 411015</p>
           <p><PhoneIcon /> +91 9552874374</p>
-          <p><EmailIcon /> info@buildconindia.com</p>
+          <p><EmailIcon /> buildconindia1@gmail.com</p>
           <p><ClockIcon /> Mon - Sat: 9:00 AM - 7:00 PM</p>
         </div>
         <div className="footer-col">

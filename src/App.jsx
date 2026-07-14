@@ -1,4 +1,5 @@
 import './App.css';
+import './styles/global.css';
 import Contacts from './pages/Contact';
 import Home from './pages/Home';
 import Services from './pages/Services';
