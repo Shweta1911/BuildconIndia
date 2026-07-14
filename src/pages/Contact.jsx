@@ -64,7 +64,7 @@ const Contacts = () => {
         <div className="contact-info-side">
           <div className="contact-info-card">
             <h3><LocationIcon /> Our Address</h3>
-            <p>258, Srno, 43, Khese Park, Lohegaon<br />Pune - 411032, Maharashtra, India</p>
+            <p>Office No. 441, Triaa Vasantam City Center, Lohgaon Rd, Dhanori, Pune, Maharashtra 411015</p>
           </div>
           <div className="contact-info-card">
             <h3><PhoneIcon /> Call Us</h3>
@@ -72,7 +72,7 @@ const Contacts = () => {
           </div>
           <div className="contact-info-card">
             <h3><EmailIcon /> Email</h3>
-            <p>info@buildconindia.com</p>
+            <p>buildconindia1@gmail.com</p>
           </div>
           <div className="contact-info-card">
             <h3><ClockIcon /> Working Hours</h3>
