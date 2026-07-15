@@ -321,7 +321,7 @@ const Home = () => {
       {/* About / Stats */}
       <section id="about" className="about section-padding">
         <div className="about-content">
-          <img src="team-building.jpg" alt="Our Team" />
+          <img src="/logo.svg" alt="Buildcon India Logo" className="about-logo" />
           <div className="about-text">
             <h2>About Us</h2>
             <p>We are a team of experienced builders delivering top-quality construction across India. Every project we undertake is a promise of excellence, integrity, and craftsmanship.</p>
