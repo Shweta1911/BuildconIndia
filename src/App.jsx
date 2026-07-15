@@ -16,8 +16,15 @@ function App() {
 
           {/* Logo / Brand */}
           <Link className="navbar-brand brand-text" to="/home">
-            <img src="/logo.svg" alt="Buildcon India" className="navbar-logo" />
-            Buildcon India
+            <div className="navbar-brand-wrapper">
+              <div className="navbar-logo-container">
+                <img src="/logo/logo.svg" alt="Buildcon India" className="navbar-logo" />
+              </div>
+              <div className="navbar-brand-text">
+                <span className="brand-title">Buildcon India</span>
+                <span className="brand-subtitle">ARCHITECTS & CONTRACTORS</span>
+              </div>
+            </div>
           </Link>
 
           {/* Mobile Toggle */}
